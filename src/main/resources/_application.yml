@@ -1,0 +1,19 @@
+server:
+  port: 8080 # port listening
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5332/customer
+    username: nayanthayasiru
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # remove databases at the restart of the server
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+  main:
+    web-application-type: servlet
